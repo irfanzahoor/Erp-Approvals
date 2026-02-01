@@ -1,0 +1,136 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Approval-{####}",
+ "creation": "2026-02-01 13:03:02.277136",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "reference_doctype",
+  "company",
+  "min_amount",
+  "max_amount",
+  "required_role",
+  "column_break_i79s",
+  "is_active",
+  "approval_level",
+  "based_on",
+  "approved_by_user",
+  "section_break_wo8q",
+  "condition",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "description": "Sales Invoice, Purchase Invoice",
+   "fieldname": "reference_doctype",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reference Doctype",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "min_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Min Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "max_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Max Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "required_role",
+   "fieldtype": "Link",
+   "label": "Required Role",
+   "options": "Role",
+   "reqd": 1
+  },
+  {
+   "description": "1 = Manager, 2 = Finance, 3 = CEO",
+   "fieldname": "approval_level",
+   "fieldtype": "Int",
+   "label": "Approval Level"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active",
+   "reqd": 1
+  },
+  {
+   "fieldname": "based_on",
+   "fieldtype": "Select",
+   "label": "Based On",
+   "options": "\nGrand Total\nNet Total\nOutstanding Amount"
+  },
+  {
+   "fieldname": "approved_by_user",
+   "fieldtype": "Link",
+   "label": "Approved By User",
+   "options": "User"
+  },
+  {
+   "fieldname": "condition",
+   "fieldtype": "Code",
+   "label": "Condition",
+   "options": "Python"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_i79s",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_wo8q",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-02-01 13:19:26.344717",
+ "modified_by": "Administrator",
+ "module": "Erp Approvals",
+ "name": "Custom Approval Matrix",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
